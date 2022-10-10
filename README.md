@@ -9,16 +9,14 @@ Directory structure:
 sqli_detection
 ├── streamlit_app.py     Main file to run the streamlit app_
 |── prediction_module.py Prediction module with all the utility functions
-├── requirements.txt     Dependencies
+├── requirements.txt    
 ├── README.md
 ├── Model
     ├──final_RFC_FE_model.model  Pickled best RF Model
     ├──tfidf_vec.sav             Pickled TFIDF vectorizer
-├── Documentation        Folder for documentation
 ├── Notebook             Folder for jupyter notebooks
-|── data                 Folder for data
+|── data                 Folder for required data 
 ```
-**NOTE**: _You can ignore the files in the Documentation and Notebook folder._
 
 ## How to run in local
 Clone the repo using git clone:
