@@ -1,4 +1,4 @@
-!pip install scikit-learn
+pip install scikit-learn
 import streamlit as st
 from prediction_module import predict_class
 
