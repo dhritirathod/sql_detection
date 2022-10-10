@@ -7,10 +7,10 @@ import os
 import requests
 
 # To load the pickled model and vectorizer
-_CWD = os.getcwd()
+_CWD = os.getcwd() 
 
 final_RFC_FE_model_file = os.path.join(_CWD,'model','final_RFC_FE_model.model')	# generate path of model agnostic to OS
-tfidf_vec_file = os.path.join(_CWD,'model','tfidf_vec.sav')											# generate path of vectorizer agnostic to OS
+tfidf_vec_file = os.path.join(_CWD,'model','tfidf_vec.sav') # generate path of vectorizer agnostic to OS
 
 # If the model and vectorizer are not already present, download them
 if not os.path.isfile(final_RFC_FE_model_file): # If the model is not present
