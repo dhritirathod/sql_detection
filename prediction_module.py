@@ -61,22 +61,17 @@ def predict_probab(X_query):
 	return proba[0]																									# Return the probability of the query being a SQLi attack
 
 def predict_class(X_q_obj, prob=False):
-	"""
+    """
 	This function predicts the class of the query if it is malicious or not.
 	if prob is set to True, it returns the probability of the query being a SQLi attack.
 	input: X_q_obj: string, prob: boolean
 	output: boolean or numpy array
 	"""
-	if isinstance(X_q_obj,list):				# If the input is a list
-		proba = []
-		for x in X_q_obj:
-			proba.append(predict_probab(x))
-		return np.array(proba)						# Return the numpy array of probabilities
-		
-	if isinstance(X_q_obj, str):				# If the input is a string
-		proba = predict_probab(X_q_obj)		# Predict the probability of the query being a SQLi attack
-		class_ = np.argmax(proba)					# Return the class of the query
-		if prob:													# If the prob = True
-			return proba										# Return the probability value
-		else:															# If the prob = False
-			return class_										# Return the class of the query
+    if isinstance(X_q_obj,list):				# If the input is a list
+        proba = [predict_probab(x) for x in X_q_obj]
+        return np.array(proba)						# Return the numpy array of probabilities
+
+    if isinstance(X_q_obj, str):				# If the input is a string
+        proba = predict_probab(X_q_obj)		# Predict the probability of the query being a SQLi attack
+        class_ = np.argmax(proba)					# Return the class of the query
+        return proba if prob else class_
