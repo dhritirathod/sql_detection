@@ -1,4 +1,4 @@
-# sqli_detection
+# SQL Injection Detection
 Diploma project based on detecting malicious query using machine learning algorithm.  
 Scope of the project: Use Machine Learning to detect SQL injection.  
 **Dataset**: https://www.kaggle.com/sajid576/sql-injection-dataset  
