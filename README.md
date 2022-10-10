@@ -2,7 +2,7 @@
 Diploma project based on detecting malicious query using machine learning algorithm.  
 Scope of the project: Use Machine Learning to detect SQL injection.  
 **Dataset**: https://www.kaggle.com/sajid576/sql-injection-dataset  
-**App link**: [SQLi Detection](https://dhritirathod-sql-detection-streamlit-app-496fpk.streamlitapp.com/)
+**App link**: [SQL Detection](https://dhritirathod-sql-detection-streamlit-app-496fpk.streamlitapp.com/)
 
 Directory structure:
 ```
