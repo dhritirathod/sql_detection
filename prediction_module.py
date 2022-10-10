@@ -14,13 +14,13 @@ tfidf_vec_file = os.path.join(_CWD,'model','tfidf_vec.sav') # generate path of v
 
 # If the model and vectorizer are not already present, download them
 if not os.path.isfile(final_RFC_FE_model_file): # If the model is not present
-    url =r'https://github.com/dhritirathod/sql_detection/tree/main/model/final_RFC_FE_model.model?raw=true' # URL of the model
+    url =r'https://github.com/dhritirathod/sql_detection/blob/main/model/final_RFC_FE_model.model' # URL of the model
     resp = requests.get(url)														# Download the model
     with open(final_RFC_FE_model_file, 'wb') as fopen:	# Open the file to write the model
         fopen.write(resp.content)												# Write the model
 
 if not os.path.isfile(tfidf_vec_file):					# If the vectorizer is not present
-    url = r'https://github.com/dhritirathod/sql_detection/tree/main/model/tfidf_vec.sav?raw=true'	# URL of the vectorizer
+    url = r'https://github.com/dhritirathod/sql_detection/blob/main/model/tfidf_vec.sav'	# URL of the vectorizer
     resp = requests.get(url)														# Download the vectorizer
     with open(tfidf_vec_file, 'wb') as fopen:						# Open the file to write the vectorizer
         fopen.write(resp.content)												# Write the vectorizer
